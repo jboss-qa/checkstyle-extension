@@ -107,7 +107,7 @@ public class BaseTest {
 	protected void verify(Checker checker, String processedFie, String messageFileName, String[] expectedOutput)
 			throws Exception {
 
-		verify(checker, new File[] {new File(processedFie) }, messageFileName, expectedOutput);
+		verify(checker, new File[] {new File(processedFie)}, messageFileName, expectedOutput);
 	}
 
 	protected void verify(Checker checker, File[] processedFiles, String messageFileName, String[] expectedOutput)
