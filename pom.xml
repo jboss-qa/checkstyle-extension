@@ -72,4 +72,12 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>bintray-jboss-soa-qa-maven-checkstyle-extension</id>
+			<name>jboss-soa-qa-maven-checkstyle-extension</name>
+			<url>https://api.bintray.com/maven/jboss-soa-qa/maven/checkstyle-extension</url>
+		</repository>
+	</distributionManagement>
 </project>
