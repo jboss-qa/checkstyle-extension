@@ -19,7 +19,7 @@
 
 	<groupId>org.jboss.soa.qa</groupId>
 	<artifactId>checkstyle-extension</artifactId>
-	<version>1.1.0</version>
+	<version>1.2.0-SNAPSHOT</version>
 
 	<url>https://github.com/jboss-qa/checkstyle-extension</url>
 	<issueManagement>
@@ -44,7 +44,7 @@
 		<url>https://github.com/jboss-qa/checkstyle-extension</url>
 		<connection>scm:git:git://github.com/jboss-qa/checkstyle-extension.git</connection>
 		<developerConnection>scm:git:git@github.com:jboss-qa/checkstyle-extension.git</developerConnection>
-		<tag>checkstyle-extension-1.1.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
