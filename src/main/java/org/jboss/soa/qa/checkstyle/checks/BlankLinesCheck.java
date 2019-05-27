@@ -15,13 +15,13 @@
  */
 package org.jboss.soa.qa.checkstyle.checks;
 
-import com.puppycrawl.tools.checkstyle.api.Check;
+import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 
 /**
  * CheckStyle extension check for identifying multiple consecutive blank lines.
  */
-public class BlankLinesCheck extends Check {
+public class BlankLinesCheck extends AbstractCheck {
 
 	/**
 	 * Maximum number of consecutive blank lines.
@@ -30,6 +30,7 @@ public class BlankLinesCheck extends Check {
 
 	/**
 	 * Sets the maximum number of consecutive blank lines to check.
+	 *
 	 * @param max the maximum
 	 */
 	public void setMax(int max) {
@@ -39,6 +40,16 @@ public class BlankLinesCheck extends Check {
 	@Override
 	public int[] getDefaultTokens() {
 		return new int[0]; // no interest
+	}
+
+	@Override
+	public int[] getAcceptableTokens() {
+		return getDefaultTokens();
+	}
+
+	@Override
+	public int[] getRequiredTokens() {
+		return getDefaultTokens();
 	}
 
 	@Override

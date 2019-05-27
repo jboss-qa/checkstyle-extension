@@ -16,6 +16,8 @@
 package org.jboss.soa.qa.checkstyle.checks;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.containsString;
 
 import com.google.common.collect.Lists;
 import com.puppycrawl.tools.checkstyle.Checker;
@@ -39,6 +41,7 @@ import java.util.Locale;
 
 /**
  * Base test class. Based on CheckStyle BaseCheckTestSupport test class.
+ *
  * @see com.puppycrawl.tools.checkstyle.BaseCheckTestSupport in CheckStyle sources
  */
 public class BaseTest {
@@ -125,9 +128,10 @@ public class BaseTest {
 		for (int i = 0; i < expectedOutput.length; i++) {
 			final String expected = messageFileName + ":" + expectedOutput[i];
 			final String actual = lnr.readLine();
-			assertEquals("error message " + i, expected, actual);
+			assertThat("error message " + i, actual, containsString(expected));
 		}
 
-		assertEquals("unexpected output: " + lnr.readLine(), expectedOutput.length, errs); checker.destroy();
+		assertEquals("unexpected output: " + lnr.readLine(), expectedOutput.length, errs);
+		checker.destroy();
 	}
 }
