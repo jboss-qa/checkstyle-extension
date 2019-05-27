@@ -15,14 +15,14 @@
  */
 package org.jboss.soa.qa.checkstyle.checks;
 
-import com.puppycrawl.tools.checkstyle.api.Check;
+import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 
 /**
  * CheckStyle extension check for identifying white spaces.
  * Check is able to identify multiple consecutive spaces (optional) and trailing whitespaces.
  */
-public class WhitespaceCheck extends Check {
+public class WhitespaceCheck extends AbstractCheck {
 
 	/**
 	 * Whether to test multiple consecutive spaces.
@@ -31,6 +31,7 @@ public class WhitespaceCheck extends Check {
 
 	/**
 	 * Sets whether to test multiple consecutive spaces.
+	 *
 	 * @param checkMultipleSpaces flag to test multiple consecutive spaces
 	 */
 	public void setCheckMultipleSpaces(boolean checkMultipleSpaces) {
@@ -40,6 +41,16 @@ public class WhitespaceCheck extends Check {
 	@Override
 	public int[] getDefaultTokens() {
 		return new int[0]; // no interest
+	}
+
+	@Override
+	public int[] getAcceptableTokens() {
+		return getDefaultTokens();
+	}
+
+	@Override
+	public int[] getRequiredTokens() {
+		return getDefaultTokens();
 	}
 
 	@Override

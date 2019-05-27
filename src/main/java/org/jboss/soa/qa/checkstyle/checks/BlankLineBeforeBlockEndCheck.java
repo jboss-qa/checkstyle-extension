@@ -15,17 +15,27 @@
  */
 package org.jboss.soa.qa.checkstyle.checks;
 
-import com.puppycrawl.tools.checkstyle.api.Check;
+import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 
 /**
  * CheckStyle extension check for identifying unnecessary blank lines before block end.
  */
-public class BlankLineBeforeBlockEndCheck extends Check {
+public class BlankLineBeforeBlockEndCheck extends AbstractCheck {
 
 	@Override
 	public int[] getDefaultTokens() {
 		return new int[0]; // no interest
+	}
+
+	@Override
+	public int[] getAcceptableTokens() {
+		return getDefaultTokens();
+	}
+
+	@Override
+	public int[] getRequiredTokens() {
+		return getDefaultTokens();
 	}
 
 	@Override
