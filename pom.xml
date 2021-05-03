@@ -20,6 +20,8 @@
 	<groupId>org.jboss.soa.qa</groupId>
 	<artifactId>checkstyle-extension</artifactId>
 	<version>1.2.0-SNAPSHOT</version>
+	<name>CheckStyle Extension</name>
+	<description>Extension checks for CheckStyle tool: http://checkstyle.sourceforge.net/</description>
 
 	<url>https://github.com/jboss-qa/checkstyle-extension</url>
 	<issueManagement>
@@ -46,6 +48,12 @@
 		<developerConnection>scm:git:git@github.com:jboss-qa/checkstyle-extension.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+
+	<developers>
+		<developer>
+			<name>jboss-qa</name>
+		</developer>
+	</developers>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -99,9 +107,15 @@
 
 	<distributionManagement>
 		<repository>
-			<id>bintray-jboss-soa-qa-maven-checkstyle-extension</id>
-			<name>jboss-soa-qa-maven-checkstyle-extension</name>
-			<url>https://api.bintray.com/maven/jboss-soa-qa/maven/checkstyle-extension</url>
+			<id>jboss-releases-repository</id>
+			<name>JBoss Releases Repository</name>
+			<url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2</url>
 		</repository>
+		<snapshotRepository>
+			<id>jboss-snapshots-repository</id>
+			<name>JBoss Snapshots Repository</name>
+			<url>https://repository.jboss.org/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
 	</distributionManagement>
+
 </project>
