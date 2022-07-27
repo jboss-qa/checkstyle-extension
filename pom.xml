@@ -65,7 +65,7 @@
 		<dependency>
 			<groupId>com.puppycrawl.tools</groupId>
 			<artifactId>checkstyle</artifactId>
-			<version>8.18</version>
+			<version>8.29</version>
 		</dependency>
 
 		<dependency>
@@ -92,7 +92,7 @@
 					<dependency>
 						<groupId>com.puppycrawl.tools</groupId>
 						<artifactId>checkstyle</artifactId>
-						<version>8.18</version>
+						<version>8.29</version>
 					</dependency>
 					<!-- Dependency on this project, run mvn install before check. -->
 					<dependency>
